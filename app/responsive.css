@@ -1,0 +1,41 @@
+@media screen and (min-width: 900px) {
+  .mobile__wrapper__clicker {
+    display: none;
+  }
+  .links__container.large {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar__mobile__view {
+    display: flex !important;
+  }
+  .categories__page__overview__div2 button{
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .link__header__main_p {
+    display: flex;
+  }
+  .post__mobile{
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .listing__price {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .listing__price__ribbon_div{
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .link__signup {
+    display: none !important;
+  }
+}
