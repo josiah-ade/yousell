@@ -1,6 +1,8 @@
 import { connectToMongoDB } from "@/lib/db";
 import Listing from "@/models/Listing";
 
+export const revalidate = 0;
+
 export async function GET(request: Request) {
   try {
     await connectToMongoDB();
