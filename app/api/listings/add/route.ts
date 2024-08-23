@@ -1,9 +1,11 @@
+import { connectToMongoDB } from "@/lib/db";
 import { verifyToken } from "@/lib/functions/tokenVerify";
 import Listing from "@/models/Listing";
 import { headers } from "next/headers";
 
 export async function POST(request: Request) {
   try {
+    await connectToMongoDB();
     const headerList = headers();
     const tokenBearer = headerList.get("authorization");
 

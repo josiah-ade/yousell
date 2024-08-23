@@ -1,3 +1,4 @@
+import { connectToMongoDB } from "@/lib/db";
 import Users from "@/models/User";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
@@ -10,6 +11,8 @@ interface BodyProps {
 }
 
 export async function POST(request: Request) {
+  await connectToMongoDB();
+  
   const { email, fullName, pass }: BodyProps = await request.json();
 
   const checkEmail = await Users.find({ email: email }).maxTimeMS(20000);

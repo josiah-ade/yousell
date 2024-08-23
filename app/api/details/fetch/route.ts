@@ -1,8 +1,10 @@
+import { connectToMongoDB } from "@/lib/db";
 import Listing from "@/models/Listing";
 import Users from "@/models/User";
 
 export async function POST(request: Request) {
   try {
+    await connectToMongoDB();
     const bodyProps = await request.json();
     const listingId = bodyProps.id;
 
