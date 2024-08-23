@@ -2,7 +2,7 @@ import ListingImageUpload from "@/components/ImageUpload/ListingImages";
 import FullPageLoader from "@/components/PageLoader/FullPage";
 import SelectReact from "@/components/Select/ReactSelect";
 import Toast from "@/components/Toastify/error";
-import { options, optionsCondition, optionsYesNo } from "@/constants/Select";
+import { options, optionsCondition, optionsYesNo, stateLocation } from "@/constants/Select";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import axios from "axios";
@@ -174,11 +174,17 @@ function BodySection() {
               <label>
                 State <sup>*</sup>
               </label>
-              <input
+              {/* <input
                 type="text"
                 name="state"
                 className="form-input mgt-10"
                 placeholder="State"
+              /> */}
+              <SelectReact
+                options={stateLocation}
+                title="State"
+                name="state"
+                required
               />
             </div>
           </Grid>
@@ -218,7 +224,6 @@ function BodySection() {
                 Condition <sup>*</sup>
               </label>
               <SelectReact
-                
                 options={optionsCondition}
                 title="Condition"
                 name="condition"
