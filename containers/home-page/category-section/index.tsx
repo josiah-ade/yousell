@@ -55,7 +55,7 @@ function CategorySection() {
         <div className="slider-container">
           <Slider {...settings}>
             <div className="bg-orange-dark slider__item__container d-flex">
-              <Link href="/mobile" className="d-flex">
+              <Link href="/categories" className="d-flex">
                 <Image
                   src="/images/smartphone.png"
                   width={70}
@@ -79,14 +79,14 @@ function CategorySection() {
               </Link>
             </div>
             <div className="bg-pink-dark slider__item__container d-flex">
-              <Link href="/vehicle" className="d-flex">
+              <Link href="/categories" className="d-flex">
                 <Image src="/images/car.png" width={70} height={70} alt="car" />
                 <h5>Vehicles / Cars</h5>
                 <p>Buy new and used Cars</p>
               </Link>
             </div>
             <div className="bg-primary-dark slider__item__container d-flex">
-              <Link href="/vehicle" className="d-flex">
+              <Link href="/categories" className="d-flex">
                 <Image
                   src="/images/agreement.png"
                   width={70}
@@ -98,7 +98,7 @@ function CategorySection() {
               </Link>
             </div>
             <div className="bg-orange-dark slider__item__container d-flex">
-              <Link href="/grocery" className="d-flex">
+              <Link href="/categories" className="d-flex">
                 <Image
                   src="/images/basket.png"
                   width={70}
@@ -110,7 +110,7 @@ function CategorySection() {
               </Link>
             </div>
             <div className="bg-blue-dark slider__item__container d-flex">
-              <Link href="/pets" className="d-flex">
+              <Link href="/categories" className="d-flex">
                 <Image
                   src="/images/pet-shop.png"
                   width={70}
@@ -122,7 +122,7 @@ function CategorySection() {
               </Link>
             </div>
             <div className="bg-pink-dark slider__item__container d-flex">
-              <Link href="/pets" className="d-flex">
+              <Link href="/categories" className="d-flex">
                 <Image
                   src="/images/sofa.png"
                   width={70}

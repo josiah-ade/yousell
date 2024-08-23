@@ -64,7 +64,7 @@ function FeaturedAdsSection() {
         <div className="slider-container">
           <Slider {...settings}>
             <ListingCard
-              _id="66b61942a36167cd2df1ea4d"
+              _id="66c89fb148f71832429c0e92"
               title="Shop affordable iphones xr smartphones"
               category="Mobile Phone"
               price="500"
@@ -73,7 +73,7 @@ function FeaturedAdsSection() {
               state="Lagos"
             />
             <ListingCard
-              _id="66b61942a36167cd2df1ea4d"
+              _id="66c89fb148f71832429c0e92"
               title="Shop affordable iphones xr smartphones"
               category="Electronics"
               price="500"
@@ -82,7 +82,7 @@ function FeaturedAdsSection() {
               state="Lagos"
             />
             <ListingCard
-              _id="66b61942a36167cd2df1ea4d"
+              _id="66c89fb148f71832429c0e92"
               title="Shop affordable iphones xr smartphones"
               category="Grocery"
               price="500"
@@ -91,7 +91,7 @@ function FeaturedAdsSection() {
               state="Abuja"
             />
             <ListingCard
-              _id="66b61942a36167cd2df1ea4d"
+              _id="66c89fb148f71832429c0e92"
               title="Shop affordable iphones xr smartphones"
               category="Real Estate"
               price="500"
@@ -100,7 +100,7 @@ function FeaturedAdsSection() {
               state="Ibadan"
             />
             <ListingCard
-              _id="66b61942a36167cd2df1ea4d"
+              _id="66c89fb148f71832429c0e92"
               title="Shop affordable iphones xr smartphones"
               category="Cars"
               price="500"
