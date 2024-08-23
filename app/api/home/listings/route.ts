@@ -9,7 +9,7 @@ export async function GET(request: Request) {
     await connectToMongoDB();
     const fetchListings = await Listing.find({})
       .select("title category price state images postView")
-      .limit(8)
+      .limit(12)
       .sort({ createdAt: -1 })
       .maxTimeMS(20000);
 
