@@ -12,7 +12,7 @@ interface BodyProps {
 export async function POST(request: Request) {
   const { email, fullName, pass }: BodyProps = await request.json();
 
-  const checkEmail = await Users.find({ email: email });
+  const checkEmail = await Users.find({ email: email }).maxTimeMS(20000);
   if (checkEmail.length > 0) {
     return Response.json(
       { data: { statusCode: 0, message: "Email Already Taken" } },

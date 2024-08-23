@@ -10,7 +10,7 @@ interface BodyProps {
 export async function POST(request: Request) {
   const { email, pass }: BodyProps = await request.json();
 
-  const checkEmail = await Users.findOne({ email: email });
+  const checkEmail = await Users.findOne({ email: email }).maxTimeMS(20000);
   if (!checkEmail) {
     return Response.json(
       { data: { statusCode: 0, message: "Wrong Email or Password" } },

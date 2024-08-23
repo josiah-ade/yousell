@@ -8,7 +8,8 @@ export async function POST(request: Request) {
 
     const fetchListing = await Listing.findById(listingId)
       .select("-__v -updatedAt")
-      .populate("userDetails", "fullName");
+      .populate("userDetails", "fullName")
+      .maxTimeMS(20000);
 
     // Check if the listing was found
     if (!fetchListing) {

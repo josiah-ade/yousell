@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     if (listingMax == 0) {
       listingMax = 100000000000000;
     }
-    
+
     const filter: { $expr: any; category?: string } = {
       $expr: {
         $and: [
@@ -26,7 +26,8 @@ export async function POST(request: Request) {
     const fetchListing = await Listing.find(filter)
       .select("title category price state images postView")
       .limit(9)
-      .sort({ price: 1 });
+      .sort({ price: 1 })
+      .maxTimeMS(20000);
 
     return Response.json(
       { data: { statusCode: 1, message: "success", data: fetchListing } },
