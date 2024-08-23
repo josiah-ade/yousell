@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     const fetchListing = await Listing.find(filter)
       .select("title category price state images postView")
       .limit(9)
-      .sort({ price: 1 })
+      .sort({ price: 1, createdAt: -1 })
       .maxTimeMS(20000);
 
     return Response.json(

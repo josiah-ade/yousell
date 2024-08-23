@@ -1,7 +1,8 @@
 import { connectToMongoDB } from "@/lib/db";
 import Listing from "@/models/Listing";
 
-export const dynamic = 'force-static'
+export const revalidate = 0;
+export const dynamic = "force-static";
 
 export async function GET(request: Request) {
   try {
@@ -14,7 +15,16 @@ export async function GET(request: Request) {
 
     return Response.json(
       { status: true, statusCode: 1, message: "success", data: fetchListings },
-      { status: 200 }
+      {
+        status: 200,
+        headers: {
+          "Cache-Control":
+            "no-store, no-cache, must-revalidate, proxy-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+          "Surrogate-Control": "no-store",
+        },
+      }
     );
   } catch (error) {
     console.log(error);
