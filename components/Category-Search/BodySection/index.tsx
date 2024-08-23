@@ -1,3 +1,4 @@
+"use client"
 import CategoryPostSkeleton from "@/components/Skeletons/Category";
 import { Close } from "@mui/icons-material";
 import ViewHeadline from "@mui/icons-material/ViewHeadline";

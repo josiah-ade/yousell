@@ -1,3 +1,4 @@
+"use client"
 import { categories } from "@/constants/Select";
 import Filter from "@/lib/filter";
 import getSymbolFromCurrency from "currency-symbol-map";
@@ -25,6 +26,7 @@ function SidebarSearch() {
 
   const [min, setMin] = useState<string | number>(getMin ?? 0);
   const [max, setMax] = useState<string | number>(getMax ?? 0);
+  const [query, setQuery] = useState<string>(gQuery ?? '');
   const [getType, setGetType] = useState<string | null>(gType);
   const [getTypeLocation, setGetTypeLocation] = useState<string | null>(
     gLocation
@@ -118,7 +120,7 @@ function SidebarSearch() {
             locationCategories,
             min,
             max,
-            gQuery
+            query
           )}
           className="btn_sm d-flex2 w-100"
         >

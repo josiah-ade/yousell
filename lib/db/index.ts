@@ -14,7 +14,7 @@ export async function connectToMongoDB() {
   try {
     // If no cached connection exists, establish a new connection to MongoDB
     const cnx = await mongoose.connect(process.env.MONGODB_URI!, {
-      connectTimeoutMS: 20000,
+      connectTimeoutMS: 60000,
     });
     // Cache the connection for future use
     cachedConnection = cnx.connection;

@@ -1,12 +1,13 @@
-
-import React from "react";
+import React, { Suspense } from "react";
 import "../page.css";
 import SearchPage from "@/containers/search-page";
-
+import SuspenseCompo from "@/components/Suspence";
 
 function Details() {
   return (
-   <SearchPage />
+    <Suspense fallback={<SuspenseCompo />}>
+      <SearchPage />
+    </Suspense>
   );
 }
 

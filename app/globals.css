@@ -90,6 +90,29 @@ input[type="checkbox"]:disabled {
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
+.suspense__class{
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-oval {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(0, 204, 130, 0.1); /* Light border color */
+  border-top: 8px solid #00cc82; /* Primary color */
+  border-radius: 50%; /* Circle shape */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
 .d-flex {
   display: flex !important;
   align-items: center !important;
