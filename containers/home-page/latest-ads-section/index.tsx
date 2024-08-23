@@ -26,9 +26,15 @@ function LatestAdsSection() {
       .get("/api/home/listings")
       .then((response) => {
         const data = response.data;
-        setDataFetched(data.data);
-        setIsLoading(false);
-        setFinishLoading(true);
+        if (data.status) {
+          setDataFetched(data.data);
+          setIsLoading(false);
+          setFinishLoading(true);
+        } else {
+          setShowToast(true);
+          setToastType("error");
+          setToastMessage("Error please try again later");
+        }
       })
       .catch((error) => {
         setShowToast(true);
@@ -53,7 +59,14 @@ function LatestAdsSection() {
       {finishLoading && (
         <Grid container spacing={2} className="ad__gd__container">
           {dataFetched.map((data, index) => (
-            <Grid xs={6} sm={6} md={4} lg={3} className="grid__ads__container" key={index}>
+            <Grid
+              xs={6}
+              sm={6}
+              md={4}
+              lg={3}
+              className="grid__ads__container"
+              key={index}
+            >
               <ListingCard
                 key={index}
                 _id={data._id}
